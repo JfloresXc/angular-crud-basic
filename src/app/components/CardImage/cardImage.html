@@ -1,0 +1,30 @@
+<div class="card shadow-sm">
+  <img src="{{hero.urlImage}}" class="card-img-top" alt="{{alt}}" />
+
+  <div class="card-header">
+    <h3><strong>Heroe:</strong> {{hero.heroName}}</h3>
+    <h5><strong>Original name:</strong> {{hero.originalName}}</h5>
+  </div>
+  <div class="card-body">
+    <p class="card-text">Appeared in {{hero.firstAppearance}}</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="btn-group">
+        <button
+          type="button"
+          class="btn btn-sm btn-outline-success"
+          (click)="viewCard(index)"
+        >
+          Edit
+        </button>
+        <button
+          type="button"
+          class="btn btn-sm btn-outline-danger"
+          (click)="deleteCard(index)"
+        >
+          Delete
+        </button>
+      </div>
+      <small class="text-muted">9 mins</small>
+    </div>
+  </div>
+</div>

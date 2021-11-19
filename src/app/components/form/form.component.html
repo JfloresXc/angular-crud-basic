@@ -1,0 +1,29 @@
+<form [formGroup]="form" (ngSubmit)="addOrEdit()">
+  <div class="mb-3">
+    <input
+      type="text"
+      formControlName="heroName"
+      class="form-control"
+      placeholder="Name of hero"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      type="text"
+      formControlName="originalName"
+      class="form-control"
+      placeholder="Original Name"
+    />
+  </div>
+  <div class="mb-3">
+    <textarea
+      type="text"
+      formControlName="firstAppearance"
+      class="form-control"
+      placeholder="First appearance"
+    ></textarea>
+  </div>
+  <button class="btn btn-primary form-control" [disabled]="form.invalid">
+    {{ textButton }}
+  </button>
+</form>
